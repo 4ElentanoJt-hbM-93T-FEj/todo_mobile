@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               const Center(
                 child: Text(
-                  "Make yourself\nmore on time",
+                  "Сделайте себя\nболее пунктуальным)",
                   style: TextStyle(
                     fontSize: 30,
                     color: Colors.white,
@@ -64,7 +64,12 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               GestureDetector(
                 onTap: () {
-
+                  Navigator.of(context)
+                    ..pop()
+                    ..pop()
+                    ..pushNamed(
+                      "/main_page",
+                    );
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width * .6,
@@ -77,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                   child: const Center(
                     child: Text(
-                      "START",
+                      "Начать",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w700,
